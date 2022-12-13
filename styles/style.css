@@ -60,12 +60,26 @@ body {
 }
 
 .screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: 2px solid var(--dark-junglegreen);
   border-radius: 10px;
   background-color: var(--middle-blue-green);
   grid-area: screen;
   aspect-ratio: 16/4;
   margin-bottom: 1em;
+}
+
+.calculation,
+.typing-area {
+  margin: 0.325em;
+  font-size: 18px;
+}
+
+.typing-area {
+  font-size: 20px;
+  text-align: right;
 }
 
 button.op {
