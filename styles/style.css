@@ -31,7 +31,7 @@ body {
 }
 
 .foot-cont {
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .calc-container {
