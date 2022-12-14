@@ -23,11 +23,9 @@ body {
 }
 
 .container {
-  margin: 2em auto;
+  margin: 1em auto;
   width: 80%;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
+  height: 80%;
 }
 
 .foot-cont {
@@ -130,6 +128,6 @@ button:active {
 
 @media (min-width: 900px) {
   .foot-cont {
-    margin: 0.5em;
+    margin: 1em;
   }
 }
