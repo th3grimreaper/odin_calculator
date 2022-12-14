@@ -29,6 +29,7 @@ body {
 
 .calc-container {
   margin: 0 auto;
+  border: 1px solid var(--dark-junglegreen);
   width: clamp(300px, 40%, 350px);
   height: auto;
   margin: 0 auto;
@@ -75,6 +76,7 @@ body {
 .typing-area {
   margin: 0.325em;
   font-size: 18px;
+  letter-spacing: 1.5px;
 }
 
 .typing-area {
