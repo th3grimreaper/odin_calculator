@@ -28,11 +28,10 @@ body {
   height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .foot-cont {
-  margin-top: 0.5em;
+  margin: 3em;
 }
 
 .calc-container {
@@ -127,4 +126,10 @@ button:active {
 .clear:hover,
 .clear:active {
   background-color: var(--mint);
+}
+
+@media (min-width: 900px) {
+  .foot-cont {
+    margin: 0.5em;
+  }
 }
