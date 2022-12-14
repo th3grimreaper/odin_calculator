@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  /* border: 2px solid red; */
 }
 
 :root {
@@ -28,23 +27,18 @@ body {
   height: 80%;
 }
 
-.foot-cont {
-  margin: 3em;
-}
-
 .calc-container {
-  margin: 1em auto;
+  margin: 0 auto;
   border: 1px solid var(--dark-junglegreen);
   width: clamp(300px, 40%, 350px);
   height: auto;
-  margin: 0 auto;
-  padding-top: 1em;
   border-radius: 10px;
+  padding-top: 1em;
   background-color: var(--granite-grey);
 }
 
 .calc-inner-cont {
-  margin: 1em;
+  margin: 0.5em;
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-rows: 0.75fr;
@@ -60,6 +54,7 @@ body {
 }
 
 .footer {
+  margin: 3em;
   text-align: center;
   color: white;
   padding-top: 0.5em;
