@@ -1,6 +1,7 @@
 let buttons = document.querySelectorAll('.op-button');
 let screen = document.querySelector('.typing-area');
 let allClear = document.querySelector('.clear');
+let backspace = document.querySelector('.backspace');
 
 //show things on screen upon click
 let buttonsArr = Array.from(buttons);
@@ -19,4 +20,11 @@ allClear.addEventListener('click', clearScreen);
 
 function clearScreen() {
   screen.textContent = "";
+}
+
+//backspace 
+backspace.addEventListener('click', delOneChar);
+
+function delOneChar() {
+  screen.textContent = screen.textContent.substr(0, screen.textContent.length - 1);
 }
