@@ -48,7 +48,7 @@ body {
   "one two three add"
   "four five six subtract"
   "seven eight nine multiply"
-  "power zero decimal divide";
+  "modulo zero decimal divide";
   gap: 0.5em;
   padding: 1em 1em 2em;
 }

@@ -5,6 +5,9 @@ let allClear = document.querySelector('.clear');
 let backspace = document.querySelector('.backspace');
 let addBtn = document.querySelector('.add');
 
+//global variables
+let sum;
+
 //clear screen
 allClear.addEventListener('click', clearScreen);
 //backspace 
@@ -13,6 +16,9 @@ backspace.addEventListener('click', delOneChar);
 addBtn.addEventListener('click', addNum);
 
 //add two (or more) numbers
+function addNum() {
+  
+}
 
 //show things on screen upon click
 let buttonsArr = Array.from(buttons);
