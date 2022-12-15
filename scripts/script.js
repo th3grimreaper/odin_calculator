@@ -41,6 +41,8 @@ equalOp.addEventListener('click', () => {
   calcScreen.textContent += numTwo;
   screen.textContent = operate(op, numOne, numTwo);
   operationResult = screen.textContent;
+  numOne = 0;
+  op = "";
 });
 
 //perform operations
