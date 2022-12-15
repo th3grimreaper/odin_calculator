@@ -20,31 +20,19 @@ Array.from(operators).forEach((operator) => {
 })
 
 function operateFunc(e) {
-  op = e.target.textContent;
-  switch(op) {
-    case '+':
-      numOne = parseFloat(screen.textContent);
-      screen.textContent = "";
-      calcScreen.textContent = numOne + op;
-      break;
-    case '-':
-      numOne = parseFloat(screen.textContent);
-      screen.textContent = "";
-      calcScreen.textContent = numOne + op;
-      break;
-    case '*':
-      numOne = parseFloat(screen.textContent);
-      screen.textContent = "";
-      calcScreen.textContent = numOne + op;
-      break;
-    case '/':
-      numOne = parseFloat(screen.textContent);
-      screen.textContent = "";
-      calcScreen.textContent = numOne + op;
-      break;
-    default:
-      console.log("ERROR!");
-      break;
+  if (op) {
+    numTwo = parseFloat(screen.textContent);
+    console.log(numTwo);
+    operationResult = operate(op, numOne, numTwo);
+    numOne = operationResult;
+    screen.textContent = "";
+    op = e.target.textContent;
+    calcScreen.textContent = numOne + op;
+  } else {
+    op = e.target.textContent;
+    numOne = parseFloat(screen.textContent);
+    screen.textContent = "";
+    calcScreen.textContent = numOne + op;
   }
 }
 
@@ -109,6 +97,7 @@ function printOnScr(event) {
 }
 
 function clearScreen() {
+  op = "";
   operationResult = 0;
   numOne = 0;
   numTwo = 0;
@@ -122,5 +111,7 @@ function delOneChar() {
     screen.textContent = calcScreen.textContent;
     calcScreen.textContent =  "";
     screen.textContent = screen.textContent.slice(0, screen.textContent.length - 1);
+    op = "";
+    numOne = screen.textContent;
   }
 }
