@@ -10,7 +10,7 @@
   --dark-junglegreen: #182825;
   --steel-blue: #5B85AA;
   --lavender: #B892FF;
-  --mint: #B5FFE1;
+  --mint: #B0ff92;
   --light-red: #FFA69E;
 }
 
@@ -48,7 +48,7 @@ body {
   "one two three add"
   "four five six subtract"
   "seven eight nine multiply"
-  "modulo zero decimal divide";
+  "decimal zero equalto divide";
   gap: 0.5em;
   padding: 1em 1em 2em;
 }
@@ -74,14 +74,14 @@ body {
 
 .calculation,
 .typing-area {
-  margin: 0.325em;
-  font-size: 18px;
+  margin: 0.125em;
+  font-size: 14px;
   letter-spacing: 1.5px;
+  text-align: right;
 }
 
 .typing-area {
   font-size: 20px;
-  text-align: right;
 }
 
 button.op {
@@ -111,6 +111,11 @@ button:active {
   background-color: var(--lavender);
 }
 
+button.equalto:hover,
+button.equalto:active {
+  background-color: var(--mango-tango);
+}
+
 .backspace:hover,
 .backspace:active {
   background-color: var(--light-red);
@@ -121,7 +126,7 @@ button:active {
   background-color: var(--mint);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .foot-cont {
     margin: 1em;
   }
