@@ -5,9 +5,24 @@ let screen = document.querySelector('.typing-area');
 let allClear = document.querySelector('.clear');
 let backspace = document.querySelector('.backspace');
 let equalOp = document.querySelector('.equalto');
+let decimalOp = document.querySelector('.decimal');
 
 //global variables
-let operationResult, numOne, numTwo, op;
+let operationResult; 
+let numOne;
+let numTwo;
+let op;
+let decimals;
+
+//add decimal to number
+decimalOp.addEventListener('click', (e) => {
+  if(decimals) {
+    screen.textContent += "";
+  } else {
+    decimals = e.target.textContent;
+    screen.textContent += decimals;
+  }
+})
 
 //clear screen
 allClear.addEventListener('click', clearScreen);
@@ -24,15 +39,17 @@ function operateFunc(e) {
     numTwo = parseFloat(screen.textContent);
     console.log(numTwo);
     operationResult = operate(op, numOne, numTwo);
-    numOne = operationResult;
+    numOne = operationResult.toFixed(2);
     screen.textContent = "";
     op = e.target.textContent;
     calcScreen.textContent = numOne + op;
+    decimals = "";
   } else {
     op = e.target.textContent;
     numOne = parseFloat(screen.textContent);
     screen.textContent = "";
     calcScreen.textContent = numOne + op;
+    decimals = "";
   }
 }
 
@@ -43,6 +60,7 @@ equalOp.addEventListener('click', () => {
   operationResult = screen.textContent;
   numOne = 0;
   op = "";
+  decimals = "";
 });
 
 //perform operations
@@ -64,7 +82,7 @@ function operate(operator, first, second) {
       console.log("enter a valid operand");
       break;
   }
-  return operationResult;
+  return parseFloat(operationResult);
 }
 
 //operation functions
@@ -105,6 +123,7 @@ function clearScreen() {
   numTwo = 0;
   screen.textContent = "";
   calcScreen.textContent = "";
+  decimals = "";
 }
 
 function delOneChar() {
@@ -115,5 +134,6 @@ function delOneChar() {
     screen.textContent = screen.textContent.slice(0, screen.textContent.length - 1);
     op = "";
     numOne = screen.textContent;
+    decimals = "";
   }
 }
