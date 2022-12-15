@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  margin: 1em auto;
+  margin: 3em auto;
   width: 80%;
   height: 80%;
 }
@@ -129,5 +129,9 @@ button.equalto:active {
 @media (min-width: 768px) {
   .foot-cont {
     margin: 1em;
+  }
+
+  .container {
+    margin: 1em auto;
   }
 }
