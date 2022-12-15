@@ -37,9 +37,8 @@ Array.from(operators).forEach((operator) => {
 function operateFunc(e) {
   if (op) {
     numTwo = parseFloat(screen.textContent);
-    console.log(numTwo);
     operationResult = operate(op, numOne, numTwo);
-    numOne = operationResult.toFixed(2);
+    numOne = operationResult;
     screen.textContent = "";
     op = e.target.textContent;
     calcScreen.textContent = numOne + op;
@@ -54,13 +53,17 @@ function operateFunc(e) {
 }
 
 equalOp.addEventListener('click', () => {
-  numTwo = parseFloat(screen.textContent);
-  calcScreen.textContent += numTwo;
-  screen.textContent = operate(op, numOne, numTwo);
-  operationResult = screen.textContent;
-  numOne = 0;
-  op = "";
-  decimals = "";
+  if(!screen.textContent) {
+    screen.textContent = "";
+  } else {
+    numTwo = parseFloat(screen.textContent);
+    calcScreen.textContent += numTwo;
+    screen.textContent = operate(op, numOne, numTwo);
+    operationResult = screen.textContent;
+    numOne = 0;
+    op = "";
+    decimals = "";
+  }
 });
 
 //perform operations
@@ -79,7 +82,7 @@ function operate(operator, first, second) {
       operationResult = divide(first, second);
       break;
     default:
-      console.log("enter a valid operand");
+      console.log("enter a valid operator");
       break;
   }
   return parseFloat(operationResult);
