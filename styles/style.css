@@ -12,6 +12,7 @@
   --lavender: #B892FF;
   --mint: #B0ff92;
   --light-red: #FFA69E;
+  --light-yellow: #E3F09B;
 }
 
 body {
@@ -109,6 +110,11 @@ button {
 button:hover,
 button:active {
   background-color: var(--lavender);
+}
+
+button.op:hover,
+button.op:active {
+  background-color: var(--light-yellow);
 }
 
 button.equalto:hover,
