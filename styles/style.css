@@ -36,6 +36,7 @@ body {
   border-radius: 10px;
   padding-top: 1em;
   background-color: var(--granite-grey);
+  box-shadow: 1px 1px 4px var(--dark-junglegreen);
 }
 
 .calc-inner-cont {
