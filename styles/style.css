@@ -8,11 +8,11 @@
   --middle-blue-green: #81d2c7;
   --mango-tango: #f98948;
   --dark-junglegreen: #182825;
-  --steel-blue: #5B85AA;
-  --lavender: #B892FF;
-  --mint: #B0ff92;
-  --light-red: #FFA69E;
-  --light-yellow: #E3F09B;
+  --steel-blue: #5b85aa;
+  --lavender: #b892ff;
+  --mint: #b0ff92;
+  --light-red: #ffa69e;
+  --light-yellow: #e3f09b;
 }
 
 body {
@@ -44,13 +44,13 @@ body {
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-rows: 0.75fr;
-  grid-template-areas: 
-  "screen screen screen screen"
-  "clear clear backspace backspace"
-  "one two three add"
-  "four five six subtract"
-  "seven eight nine multiply"
-  "decimal zero equalto divide";
+  grid-template-areas:
+    'screen screen screen screen'
+    'clear clear backspace backspace'
+    'one two three add'
+    'four five six subtract'
+    'seven eight nine multiply'
+    'decimal zero equalto divide';
   gap: 0.5em;
   padding: 1em 1em 2em;
 }
@@ -92,6 +92,7 @@ button.op {
 }
 
 button {
+  border: 2px solid var(--dark-junglegreen);
   text-align: center;
   font-size: 1rem;
   font-weight: 700;
